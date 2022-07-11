@@ -11,18 +11,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>
-          Hello! I&apos;m Wojciech Fiszer
-        </h1>
-
-        <p>
-          I&apos;m a software engineer based in Warsaw, Poland.
-        </p>
+        <h1>Hello! I&apos;m Wojciech Fiszer</h1>
+        <p>I&apos;m a software engineer based in Warsaw, Poland.</p>
       </main>
 
-      <footer>
-        By Wojciech Fiszer, 2022
-      </footer>
+      <footer>By Wojciech Fiszer, 2022</footer>
     </div>
   )
 }
