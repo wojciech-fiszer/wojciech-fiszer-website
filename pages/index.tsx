@@ -74,7 +74,7 @@ const workExperience: WorkExperience = [
 const Home: NextPage = () => {
   return (
     <Layout>
-      <main className="container mx-auto px-4 flex-1">
+      <main className="container mx-auto md:px-8 px-4 max-w-[1000px] flex-1">
         <h1 className="pt-5 text-5xl font-semibold">
           Hello! I&apos;m Wojciech Fiszer
         </h1>
