@@ -88,7 +88,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <main className="container mx-auto md:px-8 px-4 max-w-[1000px] flex-1">
-        <h1 className="pt-5 text-5xl font-semibold">
+        <h1 id="about" className="pt-5 text-5xl font-semibold">
           {helloText}
           {helloTextTyping && <TextCursor typing={helloTextTyping} />}
         </h1>
@@ -96,7 +96,9 @@ const Home: NextPage = () => {
           {introductionText}
           {helloTextFinished && <TextCursor typing={introductionTextTyping} />}
         </p>
-        <h2 className="pt-5 text-2xl">Work experience</h2>
+        <h2 id="work-experience" className="pt-5 text-2xl">
+          Work experience
+        </h2>
         {workExperience.map(({ companyName, companyLogo, timelineData }) => (
           <div key={companyName} className="pt-5">
             <Image
