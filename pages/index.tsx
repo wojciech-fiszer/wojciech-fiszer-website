@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Layout from '../components/layout'
 import Timeline, { TimelineData } from '../components/timeline'
 import Image from 'next/image'
+import useTypedText from '../hooks/useTypedText'
+import TextCursor from '../components/text-cursor'
 
 type WorkExperience = {
   companyName: string
@@ -72,14 +74,27 @@ const workExperience: WorkExperience = [
 ]
 
 const Home: NextPage = () => {
+  const { typedText: helloText, finished: helloTextFinished } = useTypedText(
+    "Hello, I'm Wojciech Fiszer",
+  )
+  const helloTextTyping = !helloTextFinished
+  const { typedText: introductionText, finished: introductionTextFinished } =
+    useTypedText(
+      helloTextFinished
+        ? "I'm a software engineer based in Warsaw, Poland."
+        : '',
+    )
+  const introductionTextTyping = !introductionTextFinished
   return (
     <Layout>
       <main className="container mx-auto md:px-8 px-4 max-w-[1000px] flex-1">
         <h1 className="pt-5 text-5xl font-semibold">
-          Hello! I&apos;m Wojciech Fiszer
+          {helloText}
+          {helloTextTyping && <TextCursor typing={helloTextTyping} />}
         </h1>
         <p className="pt-5 text-3xl">
-          I&apos;m a software engineer based in Warsaw, Poland.
+          {introductionText}
+          {helloTextFinished && <TextCursor typing={introductionTextTyping} />}
         </p>
         <h2 className="pt-5 text-2xl">Work experience</h2>
         {workExperience.map(({ companyName, companyLogo, timelineData }) => (
