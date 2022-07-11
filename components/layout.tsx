@@ -9,7 +9,7 @@ type Props = {
 
 export default function Layout({ children }: Props): JSX.Element {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>Wojciech Fiszer</title>
         <meta name="description" content="My personal website" />
@@ -18,6 +18,6 @@ export default function Layout({ children }: Props): JSX.Element {
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
