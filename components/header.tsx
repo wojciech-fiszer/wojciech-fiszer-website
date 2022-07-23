@@ -16,7 +16,7 @@ const links: {
 
 export default function Header({}: Props): JSX.Element {
   return (
-    <header className="bg-neutral-900 h-32 text-white">
+    <header className="h-32">
       <div className="container mx-auto flex justify-between items-center h-full">
         <h1 className="text-2xl font-mono font-semibold">
           <span className="text-orange-500">&lt;</span>

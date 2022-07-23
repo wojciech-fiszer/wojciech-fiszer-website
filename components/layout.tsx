@@ -9,7 +9,7 @@ type Props = {
 
 export default function Layout({ children }: Props): JSX.Element {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen text-white bg-neutral-900">
       <Head>
         <title>Wojciech Fiszer</title>
         <meta name="description" content="My personal website" />

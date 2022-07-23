@@ -66,7 +66,7 @@ export default function HomeSection(): JSX.Element {
       helloTextFinished,
     )
   return (
-    <section className="bg-neutral-900 text-white pb-12">
+    <section className="pb-12">
       <div className="container mx-auto flex font-mono">
         <div className="flex-1 py-16">
           <div className="flex items-center">
