@@ -13,7 +13,7 @@ export default function TextCursor({ className, typing }: Props): JSX.Element {
     }, 400)
     return () => clearInterval(intervalId)
   }, [])
-  const classNames = ['border-l-2', 'border-black', 'ml-1', className]
+  const classNames = ['ml-1', className]
   if (hidden && !typing) classNames.push('hidden')
-  return <span className={classNames.join(' ')}></span>
+  return <div className={classNames.join(' ')}></div>
 }

@@ -17,3 +17,37 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.scrolling-container {
+  overflow: hidden;
+}
+
+.scrolling-container > .scrolling-content {
+  animation: scroll 8s infinite linear;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.hljs-keyword {
+  color: #d1711b;
+}
+
+.hljs-string {
+  color: #608553;
+}
+
+.hljs-meta {
+  color: #e7e200;
+}
+
+.hljs-title,
+.function_ {
+  color: #febe5a;
+}
